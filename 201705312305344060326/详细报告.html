@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>详细报告_cspass论文检测</title>
+    <link href="css/public.css" rel="stylesheet"/>
+	<link href="css/report.css" rel="stylesheet"/>
+   	<script src="js/jquery-1.8.1.min.js"    type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/highcharts.js"></script>
+	<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+   		exporting:{
+   			enabled:false
+   			},
+        chart: {
+height:220,
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+            
+        },
+        colors:['#32cd32','#FF0000','#FFFF66'],
+        title: {
+            text: ''
+        },
+        tooltip: {
+    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+        
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '百分比',
+            
+            data: [
+                ['自写率',86.22],
+                ['复写率',13.78],
+                ['引用率',0]
+            ]
+        }]
+    });
+});
+    
+
+		</script>
+</head>
+<body style="background-color:#f8f8f8;">
+<!--==============================top=================================-->
+<div class="navtop">
+    <ul class="nav-tabs userpaper pull-left">
+    <li class="active"><a href="详细报告.html" >详细报告</a></li><li ><a href="简洁报告.html">简洁报告</a></li><li><a href="比对报告.html">比对报告	</a></li></ul>
+    <div class="logo pull-right">
+        <a href="/"><img src="images/logo.png"></a>   
+    </div>
+</div>
+<!--==============================content=================================-->
+<div class="paper">
+	<div class="papercenter" >
+    	<!--==============================中间内容=================================-->
+        	<!--检测结果 示意图 范围-->
+            <div class="j_c">
+                <div class="jiance jiance01">
+                    <div class="jieguo">
+                        <h1>检测结果</h1>
+                        <dl class="jieguo_show01">
+                            <dt style="color:#65c7ff;">13.78%<span>总相似比</span></dt>
+                            <dd>21,212<span>总字数</span></dd>
+                        </dl>
+                        <ul class="jieguo_show02">                      	              
+                            <li>86.22%<span>自写率</span></li>
+                            <li>13.78%<span>复写率</span></li>
+                            <li>0%<span>引用率</span></li>
+                        </ul>
+                    </div>
+                    <ul class="jieguo_show03">            
+                        <li>13.78%<span>去除本人已发表文献复写率</span></li>
+                        <li>13.78%<span>去除引用文献复制比</span></li>
+                        <li>1.12%<span>单篇最大文字复制比</span></li>
+                    </ul>
+                    <div class="jieguo_show04">
+                        <div class="show_title">62 <span> 相似片断</span></div>
+                        <div class="show_list">
+                            <ul>
+                                <li>本地库库片段：<span>59</span></li>
+								<li>互联网片段：<span>3</span></li>
+								<li>自建库片段：<span>0</span></li>
+								<li>外文库片段：<span>0</span></li> 	
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="jiance jiance02">
+                    <div class="jc_inner">
+                        <h1>检测结果示意图</h1>
+                        <div id="container" ></div>
+                    </div>
+                </div>
+                <div class="jiance jiance03">
+                    <div class="jc_inner">
+                        <h1>检测范围</h1>
+                        <ul>
+                            <li>中国期刊论文网络数据库</li>
+                            <li>中文科技期刊数据库</li>
+                            <li>中文重要学术期刊库</li>
+                            <li>中国重要社科期刊库</li>
+                            <li>中国重要文科期刊库</li>
+                            <li>中国中文报刊报纸数据库</li>
+                            <li>中国学位论文数据库</li>
+                            <li>中国优秀硕博论文数据库</li>
+                            <li>高校特色论文库</li>
+                            <li>互联网数据资源</li>
+                        </ul>
+                    </div>
+                </div>
+               <dl class="zhibiao-shuoming">
+                    <dt>指标说明：</dt>
+                    <dd>1. 总字数：送检论文的总字符数，包括中文、阿拉伯数字、外文字符、标点符号等，制表符和图表不计入统计</dd>
+                    <dd>2. 总相似比：送检论文与比对文献相似的部分（包括参考引用）占整个送检论文的比重，总相似比=复写率+引用率</dd>
+                    <dd>3. 自写率：送检论文中剔除雷同片段和引用片段后占整个送检论文的比重</dd>
+                    <dd>4. 复写率：送检论文中与检测范围所有文献相似的部分（不包括参考引用部分）占整个送检论文的比重</dd>
+                    <dd>5. 引用率：送检论文中被系统识别为引用的部分占整个送检论文的比重（引用部分指正确标注的参考引用文献）</dd>
+                </dl>
+            </div>
+        	<!--汇总-->
+     		<!--引用汇总-->
+            <div class="huizong huizong01">
+                <div class="huizong_inner">
+                    <h2 class="huizong_title">引用文献汇总：</h2>
+                    <table  class="huizong_table">
+                        <tr><th>序号</th><th>引用片段</th></tr>
+                    </table>
+                </div>	
+            </div>
+           <!--相似文献汇总-->
+            <div class="huizong huizong02">
+                <div class="huizong_inner pull-left">
+                    <h2 class="huizong_title">相似文献汇总：</h2>
+                      <table  class="huizong_table huizong_table_02" >
+                      	<tr>
+				        <th style="width:50px;">序号</th>
+				        <th>相似文献</th>
+				        <th style="width:50px;">片段数</th>
+				        <th style="width:80px;">片段相似比</th>
+				        <th style="width:270px;">来源</th>
+				       </tr>
+			               <tr>
+			               	<td class="xuhao">1</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 固体氧化物燃料电池La(NiFe)O_3基阳极材料的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			张超- 《中国优秀硕士学位论文全文数据库》 - 2015
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">6</i></td>
+			               	<td>1.12%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">2</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">大气等离子喷涂制备平板式SOFC及其密封技术的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			郑锐- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">3</i></td>
+			               	<td>0.95%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">3</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 低浓度燃料条件下运行的单气室固体氧化物燃料电池</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			刘佩珊- 《中国优秀硕士学位论文全文数据库》 - 2014
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">3</i></td>
+			               	<td>0.93%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">4</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">以ch<,4>为燃料的固体氧化物燃料电池阳极材料研究 </span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			李松丽- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">3</i></td>
+			               	<td>0.63%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">5</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">湿粉末法制备阳极支撑型固体氧化物燃料电池及其性能</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			张耀辉[1] 刘江[1] 黄喜强[2] 吕?[2] 苏文辉[- 《功能材料》 - 2008
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.45%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">6</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 锆酸盐/无机盐复相质子导体的设计、制备和性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			彭珍珍- 《中国博士学位论文全文数据库》 - 2009
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.4%</td>
+			               	<td >
+			               			
+			               			中国博士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">7</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 中温天然气燃料电池复合阳极NiO-La_(0.75)Sr_(0.25)Cr_(0.5)Mn_(0.5)O_3-δ-Ce_(0.8)Sm_(0.2)O_2-δ的制备和性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			李茂华;刘瑞泉;- 《无机化学学报》 - 2008
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.37%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">8</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">高温共电解H2OCO2制备清洁燃料</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			王振;于波;张文强;陈靖;徐景明;- 《化学进展》 - 2013
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">2</i></td>
+			               	<td>0.35%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">9</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 氧化锆薄膜器件制备及其在中高温燃料电池中的应用</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			田彦婷- 《中国优秀硕士学位论文全文数据库》 - 2011
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.32%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">10</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 新型固体氧化物燃料电池的设计及其性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			魏涛- 《中国博士学位论文全文数据库》 - 2013
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.31%</td>
+			               	<td >
+			               			
+			               			中国博士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">11</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 中温固体氧化物燃料电池新型阳极及阴极材料研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			吕洪- 《中国博士学位论文全文数据库》 - 2007
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.31%</td>
+			               	<td >
+			               			
+			               			中国博士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">12</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> γ-APS处理对有机(薄层)／达克罗复合体系EIS行为的影响</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			刘建国;殷跃军;韩长志;严川伟;- 《》 - 2006
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.3%</td>
+			               	<td >
+			               			中国重要会议论文全文数据库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">13</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">直接甲醇燃料电池在汽车上的应用前景分析</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			唐永华- 《节能与环保》 - 2005
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.3%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">14</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> YSZ基SOFC电解质/阳极的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			高杰- 《中国优秀硕士学位论文全文数据库》 - 2011
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.29%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">15</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">中温固体氧化物燃料电池阴极材料及阳极支撑电解质复合膜的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			黄文华- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.29%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">16</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">CEO<,2>基电解质薄膜的溶胶-凝胶法制备及电性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			岳慧敏- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.29%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">17</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> LaF_3多晶粉体离子导电性能的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			周明;田彦文;王常珍;- 《昆明理工大学学报(理工版)》 - 2010
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.29%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">18</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 基于Ca_3Co_4O_9热电阴极材料固体氧化物燃料电池的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			曾睿- 《中国优秀硕士学位论文全文数据库》 - 2014
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.28%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">19</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">燃料电池用氧化锆电解质薄膜的低成本制备研究 </span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			刘克艳- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.28%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">20</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 中温固体氧化物燃料电池LaBaCo_2O_(5+σ)基双钙钛矿阴极材料的性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			张立军- 《中国优秀硕士学位论文全文数据库》 - 2014
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.27%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">21</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 基于模型的锂离子电池SOC估计研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			郭凯- 《中国优秀硕士学位论文全文数据库》 - 2014
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.25%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">22</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">烧结NDFEB永磁的腐蚀行为及机理研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			刘卫强- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.23%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">23</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> MnO_2/C复合电极的制备及其析氧化性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			曹雅哲- 《中国优秀硕士学位论文全文数据库》 - 2013
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.22%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">24</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">掺纳米MGO的YSZ固体电解质结构与性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			陈平- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.22%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">25</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">垃圾填埋场渗滤液生物处理-电解深度处理工艺研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			褚衍洋- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.22%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">26</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">离子液体在染料敏化太阳电池中的应用研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			潘旭- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.21%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">27</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 中温固体氧化物燃料电池阴极材料的制备与表征</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			赵飞- 《中国博士学位论文全文数据库》 - 2009
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.21%</td>
+			               	<td >
+			               			
+			               			中国博士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">28</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 可充电锌电极的研究进展</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			方飞- 《电池》 - 2004
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.21%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">29</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> PEMFC电堆建模及特殊工况下的动态分析</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			周苏;李壮运;翟双;陈凤祥;- 《太阳能学报》 - 2011
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.2%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">30</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 质子传导型固体氧化物燃料电池电解质和复合阴极材料的制备及其性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			蒋秋妹- 《中国优秀硕士学位论文全文数据库》 - 2013
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.19%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">31</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 固体氧化物燃料电池复合阳极材料的制备和性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			牛江坡- 《中国优秀硕士学位论文全文数据库》 - 2008
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.19%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">32</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 中温固体氧化物燃料电池梯度多孔阴极制备及性能优化研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			聂丽芳- 《中国博士学位论文全文数据库》 - 2010
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.19%</td>
+			               	<td >
+			               			
+			               			中国博士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">33</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">基于DRT和ADIS的SOFC/SOEC电堆电化学阻抗谱研究</span>
+			               		<span class="color-a2a3a4">
+				               			互联网数据 -
+				               			
+				               			
+			               			
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.19%</td>
+			               	<td >
+			               			
+			               			
+			               			互联网
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">34</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 热处理温度对储氢合金高倍率放电性能的影响</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			王琳瑛;丁毅;杨猛;赵相玉;马立群;- 《武汉理工大学学报》 - 2008
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.18%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">35</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 磷酸铁锂动力电池放电过程电化学—热耦合模型研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			徐蒙- 《中国优秀硕士学位论文全文数据库》 - 2014
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.17%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">36</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">燃料电池_燃料电池资料燃料电池从天然气氧气电池燃料电..._阿里巴巴</span>
+			               		<span class="color-a2a3a4">
+				               			互联网数据 -
+				               			
+				               			
+			               			
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.16%</td>
+			               	<td >
+			               			
+			               			
+			               			互联网
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">37</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">la<,2>nio<,4+δ>阴极/ce<,0.8>sm<,0.2>o<,1.9>电解质界面的电化学性能研究 </span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			王红- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.16%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">38</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">...用作燃料的是___,能够用于灭火的是___.(2)在右图所示电解水...</span>
+			               		<span class="color-a2a3a4">
+				               			互联网数据 -
+				               			
+				               			
+			               			
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.16%</td>
+			               	<td >
+			               			
+			               			
+			               			互联网
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">39</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">酚醛树脂固化动力学研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			季庆娟 刘胜平- 《热固性树脂》 - 2006
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.15%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">40</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> D_＋－葡萄糖在Pb－Zn合金电极上电化学还原的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			赵崇涛，黄紫洋，王其泳，王清萍，朱则善- 《福建师范大学学报(自然科学版)》 - 1996
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.15%</td>
+			               	<td >
+			               			中国学术期刊网络出版总库
+			               			
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">41</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 藕节促凝血活性物质的筛选及其作用机制的初步研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			曲筱静- 《中国优秀硕士学位论文全文数据库》 - 2009
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.14%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">42</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 锂离子电池负极材料Li_4Ti_5O_(12)/TiN的制备及其电化学性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			赵小梅- 《中国优秀硕士学位论文全文数据库》 - 2012
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.14%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">43</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 虾饲料耐水性和下沉性研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			刘恬- 《中国优秀硕士学位论文全文数据库》 - 2009
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.1%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">44</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> SOFC催化剂粉体的微波制备及抗积碳复合阳极的性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			沈国阳- 《中国优秀硕士学位论文全文数据库》 - 2012
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.1%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">45</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> Ag-TiO_2复合纳米纤维的制备及光催化性能研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			董艺慧- 《中国优秀硕士学位论文全文数据库》 - 2012
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.1%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">46</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 外源水杨酸处理对哈密瓜采后生理生化效应及贮藏效果的研究</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			冯会君- 《中国优秀硕士学位论文全文数据库》 - 2009
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.1%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">47</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353">硅太阳能电池正面电极用银电子浆料制备及性能的研究 </span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			敖毅伟- 《》 - 
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.09%</td>
+			               	<td >
+			               			
+			               			中国优秀博士硕士学术论文库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">48</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 三氧化钨与高聚物复合功能材料制备及电学性质</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			刘旭- 《中国优秀硕士学位论文全文数据库》 - 2008
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.09%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+			               <tr>
+			               	<td class="xuhao">49</td>
+			               	<td class="two-lines">
+			               		<span class="color-535353"> 二溴海因水基制剂研制</span>
+			               		<span class="color-a2a3a4">
+				               			
+				               			
+				               			
+			               			徐丽君- 《中国优秀硕士学位论文全文数据库》 - 2009
+			               		</span>
+			               	</td>
+			               	<td ><i class="red">1</i></td>
+			               	<td>0.08%</td>
+			               	<td >
+			               			
+			               			中国优秀硕士学位论文全文数据库
+			               			
+			               			
+			               			
+			               	</td>
+			               </tr>
+                    </table>
+                </div>
+                <div class="huizong_inner pull-left" >
+	                    <h2 class="huizong_title">相似片段详情：</h2>
+	                      <table  class="huizong_table huizong_table_03" >
+	                        <tr>
+	                            <th style="width:100px;">序号(相似度)</th>
+	                            <th>送检片段</th>
+	                            <th>相似内容</th>
+	                            <th style="width:120px;">相似内容来源</th>
+	                        </tr>
+									<tr>
+										<td class="xuhao" style="width:10%">1<span class="have-color-ff2424">（66.67%）</span></td>
+										<td class="color-ff2424">电解质支撑性电池以及镧锶锰氧（LSM）为氧气极材料燃料极支撑性电池三种电池在不同温度下测试电化学性能</td>
+										<td>下的<font color=red>电化学性能</font>。
+（2）制作 YSZ <font color=red>电解质支撑型</font><font color=red>电池，</font><font color=red>LSM、</font><font color=red>LS</font>CF、BSCF <font color=red>三种阴</font><font color=red>极材料</font>分
+别两两组合成<font color=red>电极</font>对作为 SC-SOFC </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">2<span class="have-color-ff2424">（69.09%）</span></td>
+										<td class="color-ff2424">其中氧气极材料为镧锶锰氧（LSM）的电解质支撑性电池和氧气极材料为镧锶钴铁（LSCF）的电解质支撑性电池由实验制备得到</td>
+										<td>燃<font color=red>料电池的阴</font><font color=red>极材料</font>，目前最为成熟的就是锶
+掺杂<font color=red>的锰酸镧(</font><font color=red>LSM)</font><font color=red>和钴酸镧(</font><font color=red>LSC)</font><font color=red>材料</font>，这一类<font color=red>材料</font>在高温下有相当好<font color=red>的氧</font>还原反
+应催化活性，<font color=red>和电解质材料</font>以及连接体<font color=red>材料</font>都很匹配</td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">3<span class="have-color-ff2424">（76.67%）</span></td>
+										<td class="color-ff2424">氧气极为镧锶锰氧（LSM）的燃料极支撑性电池由实验室事先制备得到</td>
+										<td><font color=red>燃料电池氧工艺资</font><font color=red>料燃料电池从天然</font><font color=red>气氧气电池燃料电池</font>...和<font color=red>锰锶酸镧米</font><font color=red>LSM为原</font><font color=red>料制备LSM层和</font><font color=red>LSM</font>/YSZ复合层,...部分的阳<font color=red>极支撑</font>管,从而<font color=red>得到</font>管式和板式阳<font color=red>极支撑</font>体的...</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">4<span class="have-color-ff2424">（93.75%）</span></td>
+										<td class="color-ff2424">乙醇	溶剂	国药集团化学试剂有限公司</td>
+										<td>分析纯  <font color=red>国药集团化学试剂有限公司</font> 
+乙二醇</td>
+										<td>《中国优秀硕士学位论文全文数据库》-2009</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">5<span class="have-color-ff2424">（90%）</span></td>
+										<td class="color-ff2424">可溶性淀粉	造孔剂	国药集团化学试剂有限公司</td>
+										<td>                                                                                          <font color=red>国药集团化学试剂有限公司</font>
+<font color=red>可溶性淀粉</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2009</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">6<span class="have-color-ff2424">（90%）</span></td>
+										<td class="color-ff2424">乙基纤维素	粘结剂	国药集团化学试剂有限公司</td>
+										<td> 分析纯 PVP <font color=red>国药集团化学试剂有限公司
+</font><font color=red>乙基纤维素</font> </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2012</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">7<span class="have-color-ff2424">（95.24%）</span></td>
+										<td class="color-ff2424">导电银浆	导电剂	北京佳铭铂业有色金属有限公司</td>
+										<td>TOSOH
+<font color=red>导电银浆</font> 75% <font color=red>北京佳铭铂业有色金属有限公司
+</font><font color=red>导电铂浆</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2015</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">8<span class="have-color-ff2424">（72.22%）</span></td>
+										<td class="color-ff2424">松油醇	调和剂	上海凌峰化学试剂有限公司</td>
+										<td><font color=red>有限公司上海凌峰化学试剂有限公司</font>国药集团<font color=red>化学试剂有限公司</font>国药</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">9<span class="have-color-ff2424">（90.48%）</span></td>
+										<td class="color-ff2424">实验中所涉及到的实验仪器以及设备如表2所示</td>
+										<td><font color=red>实验仪器及设备
+</font><font color=red>实验过程</font><font color=red>中所用</font><font color=red>到的仪器和</font><font color=red>设备如表</font> 2-2 <font color=red>所示</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2012</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">10<span class="have-color-ff2424">（90.48%）</span></td>
+										<td class="color-ff2424">电子天平	EL104	北京赛多利斯天平有限公司</td>
+										<td><font color=red>有限公司</font> 
+<font color=red>电子天平  B</font><font color=red>L1</font>50  <font color=red>北京赛多利斯天平</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2009</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">11<span class="have-color-ff2424">（95.65%）</span></td>
+										<td class="color-ff2424">管式电炉	YFK60*440	上海意丰电炉有限公司</td>
+										<td>
+<font color=red>管式电炉 </font><font color=red>YFK60×</font><font color=red>440 </font><font color=red>上海意丰电炉有限公司</font>
+高温马弗炉 SX2</td>
+										<td>《中国优秀硕士学位论文全文数据库》-2015</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">12<span class="have-color-ff2424">（96.43%）</span></td>
+										<td class="color-ff2424">电热恒温干燥箱	DHG-9070A	上海精宏实验设备有限公司</td>
+										<td><font color=red>上海精宏实验设备有限公司</font> 
+<font color=red>DHG–</font><font color=red>9070A 型</font><font color=red>电热恒温鼓风</font><font color=red>干燥箱</font>      </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2009</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">13<span class="have-color-ff2424">（93.1%）</span></td>
+										<td class="color-ff2424">粉末压片机	FYD-40型粉末压片机	合肥科晶材料科技有限公司</td>
+										<td>
+OT<font color=red>F-12</font><font color=red>00</font>X 型管式炉 <font color=red>合肥科晶材料科技有限公司</font>
+FW<font color=red>-4A </font><font color=red>型粉末压片机</font> </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2012</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">14<span class="have-color-ff2424">（89.47%）</span></td>
+										<td class="color-ff2424">高温马弗炉	HT-1700	德国纳博热公司</td>
+										<td><font color=red>马弗炉 </font><font color=red>HT-1700 </font><font color=red>德国纳博热公司</font>
+热机械分析仪 </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2015</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">15<span class="have-color-ff2424">（91.3%）</span></td>
+										<td class="color-ff2424">电流电压表	GDM-8245	固纬电子（苏州）有限公司</td>
+										<td> 北京赛多利斯天平<font color=red>有限公司
+</font><font color=red>电流表，</font><font color=red>电压表 </font><font color=red>GDM-8245 </font><font color=red>固纬电子</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2015</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">16<span class="have-color-ff2424">（66.67%）</span></td>
+										<td class="color-ff2424">从压制好的电解质片中挑取出表面光滑平整的电解质片，在高温马弗炉中程序升温至1400℃，自然冷却后取出烧结致密的电解质片</td>
+										<td>并保<font color=red>压40</font>s使之成型<font color=red>，取出后电解质</font>薄膜自行脱落。将脱落的膜<font color=red>片在程控</font><font color=red>升温电炉中升温到</font><font color=red>14000C,焙</font><font color=red>烧4h,随</font><font color=red>炉冷却到室</font><font color=red>温，</font>得到用于SOFC<font color=red>的自支撑</font><font color=red>电解质</font>薄膜。(2)单电池<font color=red>的制</font>备</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">17<span class="have-color-ff2424">（73.21%）</span></td>
+										<td class="color-ff2424">本文实验中，烧结前后的电解质片如图2-1所示，其中图中左边电解质片为电解质烧结后，面积变小，颜色变深，图右为烧结前的电解质</td>
+										<td>质量的 1.68、1.4、1.<font color=red>12</font> 倍。将三个样品流延之<font color=red>后的</font>素坯，分别在 <font color=red>12</font>00℃
+<font color=red>烧结 5h</font><font color=red>，其</font>断面 SEM 照<font color=red>片如图</font> 3-5 <font color=red>所示，其中左侧</font><font color=red>为电解质</font>。(a)<font color=red>图中电解质</font> </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2011</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">18<span class="have-color-ff2424">（64.63%）</span></td>
+										<td class="color-ff2424">本次实验中制作了两种LSM为氧气极的电解质支撑性电池和LSCF为氧气极的电解质支撑性电池，这两种电池在电解质片以及燃料极材料上没有差别，仅在氧气极材料的制备上存在着差别</td>
+										<td>，并使得气室内
+部气体组成分布发生改变。因此，对于不同<font color=red>电极材料</font>对气体选择催化性能力的
+强弱的研究就变得很有必要。
+3.2 传统阴<font color=red>极材料做对</font><font color=red>电极的电池制备
+</font><font color=red>实验</font>分别测试了三<font color=red>种电极材料两两</font>组合作对<font color=red>电极的电解质支撑型</font><font color=red>电池，电
+</font><font color=red>池中两电极为两种</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">19<span class="have-color-ff2424">（70.79%）</span></td>
+										<td class="color-ff2424">称取LSM粉末、8YSZ粉末，其中LSM粉末和8YSZ粉末的比例为7：3，以溶有乙基纤维素的松露醇为调和剂将8LSM粉末和YSZ粉末调和在一起混成浆状，用研钵研磨两个小时以上使浆料充分均匀</td>
+										<td>高温导电性能的测试。2．2 电解质膜及单电池的制备将TOSOH <font color=red>YSZ粉末</font>与有机粘结荆以4 t 1的质量<font color=red>比混合</font><font color=red>，在</font>玛瑙研碎<font color=red>中充分研磨，使得</font><font color=red>YSZ粉末和有机粘结</font><font color=red>剂混合</font><font color=red>均匀，</font>得到用于制膜<font color=red>的浆料。</font><font color=red>其中有机粘结</font><font color=red>剂为乙基纤维素的松油</font><font color=red>醇溶</font>液。取适量<font color=red>YSZ </font><font color=red>浆料，使其均匀</font>铺展于阳极支撑体的表面</td>
+										<td>《功能材料》-2008</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">20<span class="have-color-ff2424">（60%）</span></td>
+										<td class="color-ff2424">用丝网印刷技术在电解质片的一面用燃料极材料涂上直径约为1cm的圆，静置一天待电解质片上的燃料极材料松露醇挥发完全</td>
+										<td>粉末形成分散均匀的浆<font color=red>料，</font>
+使<font color=red>用的</font>方法是与乙基纤维素-松油<font color=red>醇在</font>小研钵中充分研磨<font color=red>，用丝网印刷技术在</font>已
+涂好阳<font color=red>极的电解质片的另一侧</font><font color=red>涂上阴极浆</font><font color=red>料，</font>然后放在马福炉中 </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">21<span class="have-color-ff2424">（76.27%）</span></td>
+										<td class="color-ff2424">本文实验中用到了LSM为氧气极的电解质支撑性电池、LSCF为氧气极的电解质支撑性电池以及LSM为氧气极的燃料极支撑性电池</td>
+										<td>阴极材料分别作为 Ni-YSZ 阳<font color=red>极支撑型</font><font color=red>电池的</font>阴极材料时，<font color=red>电池</font>在五个温度、
+十五个气体浓度下<font color=red>的电</font>化学性能。
+（2）制作 YSZ <font color=red>电解质支撑型</font><font color=red>电池，</font><font color=red>LSM、LSCF、B</font><font color=red>SCF</font> </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">22<span class="have-color-ff2424">（66.67%）</span></td>
+										<td class="color-ff2424">连上银丝的电解质支撑性电池如图2-3所示，电极上所引出的银丝用于电化学性能的测试</td>
+										<td>~700 C。对称阴极单<font color=red>电池电化学性能测试示意</font><font color=red>图如</font>
+图 <font color=red>3-2 </font><font color=red>所示</font>111。<font color=red>测试</font>前在对称阴极单<font color=red>电池的上</font>下两个阴极表面</td>
+										<td>《中国优秀硕士学位论文全文数据库》-2013</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">23<span class="have-color-ff2424">（93.1%）</span></td>
+										<td class="color-ff2424">这时电压损失主要来源于激活极化；电流绝对值增 加到一定程度后，电压随电流的增加而线性下降，这表明电阻极化或者欧姆损失占据主导</td>
+										<td>而快速<font color=red>下降，这时电压损失主要来源于激活极化；电流增加到一定程度后，电压随电流的增加而线性下降，这表明电阻极化或欧姆损失占据主导；在高</font><font color=red>电流区域</font><font color=red>，电极</font>过程为质量输运所控制<font color=red>，电压迅速</font><font color=red>下降</font>。</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">24<span class="have-color-ff2424">（88.89%）</span></td>
+										<td class="color-ff2424">电流绝对值继续增大时，电压又迅速下降，但此时曲线曲率，电极过程为质量输运所控制</td>
+										<td>
+占据主导；<font color=red>电流继续增大时，电压又迅速下降，但此时曲线曲率</font>dV2/dl2≤0，
+<font color=red>电极过程为质量输运控制</font>。 </td>
+										<td>《中国优秀硕士学位论文全文数据库》-2008</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">25<span class="have-color-ff2424">（88.33%）</span></td>
+										<td class="color-ff2424">由阻抗谱可以得出许多有关电池电化学过程的信息，如多晶电解质晶粒、晶界电阻和晶界电容，以及电池的电极反应动力学类型、主要控制步骤等</td>
+										<td>测量的是固体<font color=red>电解质和电极组成</font><font color=red>的电池的阻抗</font>与微扰频率<font color=red>的关</font>
+系，我们<font color=red>可由阻抗谱得出许多有关的电化学过程的信息，例</font><font color=red>如多晶电解质晶粒、晶
+</font><font color=red>界电阻，以及电池的电极反应动力学类型等</font>。在本次实验中采用</td>
+										<td>《中国博士学位论文全文数据库》-2013</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">26<span class="have-color-ff2424">（79.25%）</span></td>
+										<td class="color-ff2424">SOC 中常用的是交流阻抗谱法，当我们用一个角频率为 ω 振幅足够小的正弦波电流信号对一个稳定的电池系统进行扰动时</td>
+										<td><font color=red>阻抗谱
+</font><font color=red>用一个角频率为ω的振幅足够小的正弦波电流信号对一个稳定的电池系统
+</font><font color=red>进行扰动时，</font>相应地测得<font color=red>电池电压会有</font><font color=red>一个角频率为ω的正弦波</font>响应。同样地，
+<font color=red>用一个</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">27<span class="have-color-ff2424">（95.56%）</span></td>
+										<td class="color-ff2424">系统会相应地做出角频率为 ω 的正弦波响应，从被测电极与参比电极之间输出一个角频率是 ω 的电压信号</td>
+										<td>扰动时<font color=red>，相应地电极电位就</font><font color=red>会做出角频率为CO</font><font color=red>的正弦波
+</font><font color=red>响应，从被测电极与参比电极之间输入</font><font color=red>一个角频率是(0</font><font color=red>的电压信号，此时</font><font color=red>电极系统的频</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2013</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">28<span class="have-color-ff2424">（100%）</span></td>
+										<td class="color-ff2424">此时系统的频响函数就是电化学阻抗，在一系列不同角频率下测得的一组频响函数值就是系统的电化学阻抗谱</td>
+										<td>为∞<font color=red>的电压信号</font><font color=red>，此时电极</font><font color=red>系统的频晌</font><font color=red>函数，就是电化学阻抗。</font><font color=red>在一系列不同角频率下测得的一组这种</font><font color=red>频响函数值则</font><font color=red>是电极</font><font color=red>系统的电化学阻抗谱</font>。如果扰动信号X为正弦波</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">29<span class="have-color-ff2424">（100%）</span></td>
+										<td class="color-ff2424">与线性电学系统不同，SOC 的电化学过程一般由两类变量控制，其中一类是描述系统状态的变量，如晶界电容、电极电位、电极表面与电极反应有关的物 质的浓度等，它们统称为状态变量</td>
+										<td>应尽量减小导<font color=red>线电阻。</font><font color=red>与线性电学系统不同，SOF</font><font color=red>C的电化学过程一般由两类变量控制，其中一类是描述系统状态的变量，如晶界电容、电极电位、电极表面与电极反应有关的物质的浓度等，它们统称为状态变量。另</font><font color=red>一类是控制参</font><font color=red>量，如电</font>解质离子迁移速率<font color=red>、电极反应</font>速度常数</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">30<span class="have-color-ff2424">（91.67%）</span></td>
+										<td class="color-ff2424">另一类是控制参量，如电解质离子迁移速率、 电极反应速度常数、塔菲尔常数、扩散系数等</td>
+										<td>
+的物质浓<font color=red>度等，</font>它们统成为状态变量。<font color=red>另一类是控制参量，如电解质离子迁移</font>
+<font color=red>速率、电极反应速度常数、扩散系数等</font></td>
+										<td>《中国博士学位论文全文数据库》-2010</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">31<span class="have-color-ff2424">（100%）</span></td>
+										<td class="color-ff2424">在阻抗的测试过程中，由于是在 恒温下进行，控制参量一般可保持不变，而状态变量则会发生变化</td>
+										<td>等。<font color=red>在阻抗的测试过程中，由于是在恒温下进行测量，控制参量一般可保持不变，而状态变量则会发生变化</font>。电极系统能否满足阻纳的3</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">32<span class="have-color-ff2424">（100%）</span></td>
+										<td class="color-ff2424">状态变量受 扰动后偏离定态值而在扰动消失后恢复到原来的定态值的过程，称为驰豫过程</td>
+										<td><font color=red>，而状态变量</font>则会发生变化。<font color=red>状态变量受扰动后偏离定态值而在扰动消失后恢复到原来的定态值的过程，称为驰豫过程</font>。如果保持某一<font color=red>状态变量</font></td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">33<span class="have-color-ff2424">（96.23%）</span></td>
+										<td class="color-ff2424">电池中不同的电化学过程有不同的频率驰豫，只有在其特征频率下才会对扰动响应，因此从阻抗谱可以区分不同的电化学过程</td>
+										<td>微观结构和电性能之间的关系。<font color=red>电池
+</font><font color=red>中不同的化学过程有不同的频率弛</font><font color=red>豫，只有在其特征频率下才会对扰动响应</font>。因
+<font color=red>此，</font>通过交流<font color=red>阻抗谱的</font>形状、大小以及出现<font color=red>的频率可以区分不同的</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2015</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">34<span class="have-color-ff2424">（88.89%）</span></td>
+										<td class="color-ff2424">典型的交流阻抗谱及等效电路有以下几种：</td>
+										<td>
+    从理论上来讲，<font color=red>典型的阻抗谱及其</font><font color=red>等效电路有以下几种</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2008</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">35<span class="have-color-ff2424">（95.83%）</span></td>
+										<td class="color-ff2424">1) 当电池的等效电路为一纯电阻 R 时， Z   R ，  0 ，则复平面图实轴上的一点 A，见图 2-10 a，Z 为恒值，与频率无关</td>
+										<td><font color=red>实轴上的一点A，见图2)当电池的等效电路为一纯电容</font><font color=red>R时Z</font>二2=R, 0=<font color=red>0，则复平面图</font>中1.7a, <font color=red>Z为恒值，与频率无关。C</font><font color=red>时，</font>:=:一共G尤二汀沙二<font color=red>一2</font> </td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">36<span class="have-color-ff2424">（90.24%）</span></td>
+										<td class="color-ff2424">2) 当电池的等效电路为一纯电容 C 时，，，则复平面图中为一条与虚轴重合的直线，见图 2-10 b</td>
+										<td><font color=red>)当电池的等效电路为一纯电容c</font><font color=red>时，</font>z=z。=去，口=三<font color=red>，则复平面图中为一条与虚轴Z’</font><font color=red>重合的直线，如</font><font color=red>图2-lb。</font><font color=red>图中</font>∞箭头方向为频率增加</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">37<span class="have-color-ff2424">（100%）</span></td>
+										<td class="color-ff2424">图中  箭头方向为频率 增加方向，各点表示同频率，随频率的增加而趋于零点</td>
+										<td>。<font color=red>图中∞</font><font color=red>箭头方向为频率增加的方向，各点表示不</font><font color=red>同的频率，Z</font><font color=red>随频率的增加而趋于零点</font>。</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">38<span class="have-color-ff2424">（89.29%）</span></td>
+										<td class="color-ff2424">3) 当电池的等效电路为电阻RP与电容CP并联组合时，其阻抗为：谱是直径为 RP，圆心为 ( RP/2, 0)的半圆，见图 2-10 c</td>
+										<td>而趋于零点。<font color=red>(c)当电池的等效电路为电阻R，与电容C，并联组合时，其阻抗为</font>z=研ep—jcoRpzCp <font color=red>阻抗谱是直径为心，圆心(R,／</font><font color=red>2，0)的半圆，如</font><font color=red>图3-1(C</font></td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">39<span class="have-color-ff2424">（80%）</span></td>
+										<td class="color-ff2424">4) 当等效电路为电阻RS与CS串连组合时，，阻抗谱见图 2-10 d</td>
+										<td>, <font color=red>4)当等效电路为电阻R与电容</font><font color=red>C串联</font><font color=red>组合时，</font>Z = R., -jco<font color=red>C，阻抗谱如</font><font color=red>图1</font>.7d</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">40<span class="have-color-ff2424">（70.18%）</span></td>
+										<td class="color-ff2424">在实际电池的阻抗谱测量中，往往由很多的电化学过程所控制，实际的等效电路为各种电阻与电容等的串并联组合，其阻抗谱也比较复杂</td>
+										<td><font color=red>的测量</font>是把Z作为ω的函数<font color=red>并在较</font>宽的频率范围内<font color=red>测量的</font>.正是Z(ω)随ω变<font color=red>化的</font>情况不同才能导出整个电极-材料交流<font color=red>的电性质.</font><font color=red>实际电池的等效电路常</font><font color=red>为各种电阻与电容的串并联组合</font>3如图1所示<font color=red>复阻抗</font></td>
+										<td>《昆明理工大学学报(理工版)》-2010</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">41<span class="have-color-ff2424">（100%）</span></td>
+										<td class="color-ff2424">任何状态变量只有在其特征频率（时间常数的倒数）才会对扰动响应，而且只有当特征频率的差异大于100倍时，才能从阻抗谱图中很好的区分</td>
+										<td>
+<font color=red>在阻抗谱的测</font><font color=red>量中，任何状态变量只有在其特征频率（时间常数的倒数）才会对</font>
+<font color=red>扰动响应，而且只有当特征频率的差异大于 </font><font color=red>100 </font><font color=red>倍时，才能从阻抗谱图中很好的</font>
+<font color=red>区分</font>9</td>
+										<td>《中国博士学位论文全文数据库》-2007</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">42<span class="have-color-ff2424">（80.56%）</span></td>
+										<td class="color-ff2424">但一般来说，阻抗谱的高频和中频部分对应于晶粒内和晶界效应，低频部分则反映电极的极化作用，且电极反应过程对应的是一些小于半圆的圆弧（由于驰豫时间发生了变化）</td>
+										<td>实际的单电池<font color=red>阻抗谱</font>图往往没有电解质<font color=red>晶界代表</font><font color=red>的半圆，且电极反应过程对应的是一些小于半圆的圆弧(</font><font color=red>由于驰豫时间发生了变化)</font><font color=red>，弧的</font>末端常出现扭曲或重叠等复杂形状(电解质<font color=red>和电极反应</font>之间相互祸合，特征频率重叠所致)[78]。<font color=red>但一般来说，阻抗</font></td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">43<span class="have-color-ff2424">（97.5%）</span></td>
+										<td class="color-ff2424">弧的末端常出现扭曲或重叠等复杂形状（电解质和电极反应之间的相互耦合，特征频率重叠所致）</td>
+										<td>半圆的圆弧(由于驰豫时间发生了变化)<font color=red>，弧的末端常出现扭曲或重叠等复杂形状(</font><font color=red>电解质和电极反应之间相互祸</font><font color=red>合，特征频率重叠所致</font>)[16</td>
+										<td>《》-</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">44<span class="have-color-ff2424">（79.75%）</span></td>
+										<td class="color-ff2424">不过由于电极极化产生的半圆远大于电解质晶粒、晶界本身产生的半圆， 且高温下代表电解质晶粒、晶界的圆弧因特征频率太高而逐渐消失，所以阻抗谱上往往出现的是代表电极反应的圆弧</td>
+										<td><font color=red>晶粒</font>
+- 87 - 
+天津大学博士学位论文 
+和<font color=red>晶界响</font><font color=red>应，而</font>低频部分则反映<font color=red>电极的极化作用。</font><font color=red>由于电极极化产生的半圆远大</font>
+<font color=red>于电解质晶粒和</font><font color=red>晶界本身产生的半圆，且高温下代表电解质晶粒、晶界的圆弧因</font>
+<font color=red>特征频率太高而</font>难以</td>
+										<td>《中国博士学位论文全文数据库》-2009</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">45<span class="have-color-ff2424">（90.11%）</span></td>
+										<td class="color-ff2424">本论文采用德国 ZAHNER 公司的 IM6ex 电化学工作站对电池进行测试，施加交流偏压为20mV或振幅为10mA的正弦电流信号恒流放电状态下测量EIS，测试频率范围为30mHz-100kHz</td>
+										<td>阻抗谱可以用等效
+电路来<font color=red>进行</font>分析，即用一些分立<font color=red>的电</font>气元件组成气路，拟合<font color=red>电化学体系</font><font color=red>的行为。
+</font><font color=red>本论文采用德国 </font><font color=red>ZAHNER </font><font color=red>公司的 </font><font color=red>IM6e </font><font color=red>电化学工作站对电池进行测试，施
+</font><font color=red>加交流偏压振幅为 </font><font color=red>10 </font><font color=red>mA </font><font color=red>的正弦电流信号恒流放电状态下测量 </font><font color=red>EIS，测试频率范
+</font><font color=red>围为 </font><font color=red>100</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2015</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">46<span class="have-color-ff2424">（87.5%）</span></td>
+										<td class="color-ff2424">（a）纯电阻R；（b）纯电容C；（c）电阻RP与电容CP并联；（d）电阻RS与CS串联</td>
+										<td>2.4各种等效电路的阻抗谱:a)<font color=red>纯电阻凡b)</font><font color=red>纯电容c;c)</font><font color=red>电阻今</font><font color=red>与电容今</font><font color=red>并联</font>:
+d)<font color=red>电阻Rs</font><font color=red>与电容C</font>s串连;e、O两种<font color=red>电阻</font></td>
+										<td>《中国博士学位论文全文数据库》-2009</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">47<span class="have-color-ff2424">（68.42%）</span></td>
+										<td class="color-ff2424">电化学阻抗谱（EIS 曲线）的高频截距反映的是电池的欧姆阻抗（RΩ），低频截距为电池总阻抗（RT），两者的差值为该电池的极化阻抗（RP）</td>
+										<td>
+哈尔滨工业大学理学硕士学位论文 
+图 3-6 为开路条件下单<font color=red>电池的阻抗谱，阻抗谱高频端</font><font color=red>截距为欧姆阻抗，</font>
+主要来源于电解质薄膜<font color=red>，低频和</font><font color=red>高频端</font><font color=red>截距之</font><font color=red>差为</font>阴极和阳<font color=red>极的总极化阻抗</font></td>
+										<td>《中国优秀硕士学位论文全文数据库》-2011</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">48<span class="have-color-ff2424">（66.1%）</span></td>
+										<td class="color-ff2424">从图中可以很明显的发现，随着工作温度的不断升高，所测的EIS曲线逐渐左移，说明电池的欧姆阻抗和极化阻抗均出现了不断减小的情况</td>
+										<td>不同阳<font color=red>极极化电位下</font><font color=red>的EIS测</font>最，结果(Bode图)列于图5。<font color=red>很明显，阳</font><font color=red>极极化</font>对高频区 <font color=red>的阻抗</font>特征没有影响，而中频和低频区则表<font color=red>现出了明显的变化:</font><font color=red>随着极化电位</font><font color=red>的升高，相角值</font><font color=red>逐渐 </font><font color=red>减小。因此</font><font color=red>可以</font></td>
+										<td>《》-2006</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">49<span class="have-color-ff2424">（72.22%）</span></td>
+										<td class="color-ff2424">从电池的三组不同温度的I-P曲线来看，随着温度的升高，功率的最大值会越大，并且最大功率所在的电流密度的值也会相应地增加，三组电池在800℃时，电功率为最大</td>
+										<td>由图5中可以看出<font color=red>不同</font>复合比的单<font color=red>电池随着温度的升高电流密度和比</font><font color=red>功率随之</font><font color=red>增大在6</font><font color=red>00℃时比</font><font color=red>功率和</font><font color=red>电流达到</font><font color=red>最大值</font>。在4组单<font color=red>电池</font>中以LSCM∶SDC=2∶3的单<font color=red>电池(</font><font color=red>电池</font>B)性能最佳在6<font color=red>00℃时I</font>max=215.49mA·cm-2</td>
+										<td>《无机化学学报》-2008</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">50<span class="have-color-ff2424">（82.05%）</span></td>
+										<td class="color-ff2424">SOEC模式是SOFC模式的逆向模式，两个模式下的I-V曲线图呈现出一定的对称性</td>
+										<td>中面临的主要问题是不确<font color=red>定性</font>,很多不同的物理、化学过程或步骤<font color=red>呈现出</font>相似的阻抗...图4<font color=red>SOFC和</font><font color=red>SOEC模式下C</font>ell-1和Cell-2的阻抗谱(a)以及<font color=red>I-V曲线</font>(b)Fig.4...</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">51<span class="have-color-ff2424">（77.55%）</span></td>
+										<td class="color-ff2424">三组电池在相同的外加电压下，随着工作温度的不断升高，电流密度也不断增大，与之相对应的CO速率也不断的增大</td>
+										<td><font color=red>电池的</font>内阻减小<font color=red>，同时</font><font color=red>随着温度的升高，在相同的电流密度下，电池的工作电压随之</font>图3 DOW 质子交换膜<font color=red>在不同工作温度下对电压</font>(功率)的影响<font color=red>增大，也</font>就是意味<font color=red>着电池</font></td>
+										<td>《小型内燃机与摩托车》-2005</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">52<span class="have-color-ff2424">（76.47%）</span></td>
+										<td class="color-ff2424">固体氧化物燃料电池SOFC模式下的I-V、I-P曲线测试和固体氧化物电解池SOEC模式下的I-V曲线测试</td>
+										<td>liquid-fuel energycycles40对<font color=red>固体氧化物在</font><font color=red>SOFC(</font><font color=red>电池)</font><font color=red>和SOEC(</font><font color=red>电解池)两种</font><font color=red>模式下的</font>运行情况进行<font color=red>测试。发现</font><font color=red>SOFC</font>性能随压力的增加而提高</td>
+										<td>《化学进展》-2013</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">53<span class="have-color-ff2424">（95%）</span></td>
+										<td class="color-ff2424">固体氧化物电解池高温共电解H2O 与 CO2</td>
+										<td>本文详细介绍了利用<font color=red>高温固体氧化物电解池共电解H2O和</font><font color=red>CO2</font></td>
+										<td>《化学进展》-2013</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">54<span class="have-color-ff2424">（67.27%）</span></td>
+										<td class="color-ff2424">所提出的共电解模型描述了在阴极侧同时发生的蒸汽（5）和二氧化碳（6）的电还原反应的H2和CO产生，同时在阳极侧产生氧气（7）</td>
+										<td>;与此<font color=red>同时</font>,少量的甲醇在扩散<font color=red>和电</font>渗作用下,从<font color=red>阳极渗透导</font><font color=red>了阴极</font>,部分甲醇又<font color=red>在阴极</font>催化剂层与<font color=red>氧气反应生产二氧化碳和</font>水。    甲醇<font color=red>在阳极的氧化反应</font>如下:　　<font color=red>CH3</font><font color=red>OH+</font><font color=red>H2O→</font><font color=red>CO2+</font><font color=red>6H</font>++6e-</td>
+										<td>《节能与环保》-2005</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">55<span class="have-color-ff2424">（60.47%）</span></td>
+										<td class="color-ff2424">浓度超电势描述了由于沿着电池的活性物质耗尽/产生以及通过多孔电极的扩散而导致的电压增加</td>
+										<td><font color=red>了活性物质</font>锌减小了负极容量而且气体<font color=red>的产生增加了电池内压。</font><font color=red>由于电池</font>中通常采用<font color=red>多孔电极</font>真实表面积很大故整个自放电量非常显著因此应尽可能减少</td>
+										<td>《电池》-2004</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">56<span class="have-color-ff2424">（61.29%）</span></td>
+										<td class="color-ff2424">由于存在二氧化碳，燃料电极的活性位置潜在地不能完全用于水分子电解</td>
+										<td>可<font color=red>燃性可用作</font><font color=red>燃料而</font><font color=red>二氧化碳既</font><font color=red>不能燃</font>烧又不支持燃烧...(10)水是<font color=red>由水分子</font>构成的;一个<font color=red>水分子是</font><font color=red>由二</font>个氢...(3)<font color=red>电极</font>产生副反应等造成的.如用稀硫酸溶液作<font color=red>电解</font>...</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">57<span class="have-color-ff2424">（65.62%）</span></td>
+										<td class="color-ff2424">（1）在电化学模型中计算热源或水槽的产生，作为化学和电化学动力学的函数</td>
+										<td>，进而获得更为合理<font color=red>的计算</font>
+结果。较之电池<font color=red>生热模型和电化学动力学模型，电化学</font>-热稱合<font color=red>模型</font>考虑了电池内</td>
+										<td>《中国优秀硕士学位论文全文数据库》-2014</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">58<span class="have-color-ff2424">（60%）</span></td>
+										<td class="color-ff2424">阳极和阴极侧的固体和气体之间的热交换系数由有效气体导电率表示，因此也沿气体通道演化</td>
+										<td>‘一/‘淤·黯) C:‘=缸‘i符号表冷却液<font color=red>通道和气体通道的热交换系数气体通道</font>与MEA控制<font color=red>体的热交换系数阴/</font><font color=red>阳极电极</font>与膜交界处水</td>
+										<td>《太阳能学报》-2011</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">59<span class="have-color-ff2424">（68.42%）</span></td>
+										<td class="color-ff2424">反映电化学动力学的WGS反应的动力学常数和电极交换电流密度也被假定为热激活的</td>
+										<td><font color=red>的电化学动力学参</font><font color=red>数交换电流密度</font>就能直接<font color=red>反映储氢</font><font color=red>电极的</font>快速充放电能力。根据Zheng G等14的研究确定多孔<font color=red>电极的交换电流密度</font></td>
+										<td>《武汉理工大学学报》-2008</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">60<span class="have-color-ff2424">（81.48%）</span></td>
+										<td class="color-ff2424">其中i是预指数因子，Ea是活化能，R是气体常数，T是局部温度</td>
+										<td>) (4) <font color=red>其中A</font><font color=red>是指数因子，E是活化能，T</font> 是各个升温速率下的峰顶<font color=red>温度，R是气体常数</font>。对</td>
+										<td>《热固性树脂》-2006</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">61<span class="have-color-ff2424">（60.71%）</span></td>
+										<td class="color-ff2424">图1给出了电流密度，转化率，合成气生产和温度的电解电解操作图</td>
+										<td>是合适的．图４<font color=red>电流密度对</font><font color=red>电流效</font><font color=red>率的</font>影响图５<font color=red>电解时间对</font><font color=red>电流效</font><font color=red>率和转化率的</font>影响－－·－－·一<font color=red>转化率</font></td>
+										<td>《福建师范大学学报(自然科学版)》-1996</td>
+									</tr>
+									<tr>
+										<td class="xuhao" style="width:10%">62<span class="have-color-ff2424">（62.79%）</span></td>
+										<td class="color-ff2424">首先，在入口流量和电池电压相同的条件下，共电解中达到的电流密度低于蒸汽电解中获得的电流密度</td>
+										<td><font color=red>相同的电流(</font><font color=red>电流密度)</font><font color=red>条件下，获得不</font><font color=red>同的电压</font>以及电极电位，采取向垃圾渗滤液中投加不参与电极反应的Na2SO;以调节电导率，投加量分别为Og</td>
+										<td>《》-</td>
+									</tr>
+	                    </table>
+	                </div>	
+                 <dl class="zhibiao-shuoming">
+                    <dt>指标说明：</dt>
+                    <dd>1、相似文献：所检测到的相似片段的出处来源文献。</dd>
+                    <dd>2、片段数（%）：送检论文中来源于本相似文献的相似片段数及相似片段占全部文献字数的百分比。</dd>
+                    <dd>3、引证：送检测片段被系统识别的文献出处在论文参考文献中有列举。</dd>
+                </dl>
+            </div>
+           <!-- 申明  -->  
+            <dl class="shengming">
+            	<div class="shengming_inner">
+                <dt>声明：报告编号系送检论文检测报告在本系统中的唯一编号。本报告为cspass论文检测系统算法自动生成，仅对您所选择比对资源范围内检验结果负责，仅供参考。</dt>
+                <dt>客服热线：******* | 客服QQ：******* | 客服邮箱：********</dt>
+                <dt>机构版网址：<a href="#"> </a>| 个人版网址：<a href="#"></a></dt>
+                </div>
+            </dl>
+    </div>
+</div>
+</body>
+</html>
